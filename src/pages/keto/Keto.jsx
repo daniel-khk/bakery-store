@@ -1,6 +1,6 @@
 import styles from './Keto.module.scss';
 import Title from '../../components/title/Title';
-import ItemCard from '../../components/itemCard/itemCard';
+import ItemCard from '../../components/itemCard/ItemCard';
 import ketoData from '../../data/ketoData';
 
 
