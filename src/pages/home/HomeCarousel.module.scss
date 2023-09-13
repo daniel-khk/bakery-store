@@ -1,0 +1,242 @@
+@use '../../variables' as *;
+
+.container {
+	position: relative;
+	width: 100%;
+}
+
+.imageBox {
+	overflow: hidden;
+	width: 100%;
+	aspect-ratio: 16/9;
+	background-color: $background-light;
+}
+
+.content {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transition: 1s ease;
+	img {
+		min-height: 100%;
+		min-width: 100%;
+		object-fit: cover;		
+	}
+}
+
+.leftButton {
+	position: absolute;
+	z-index: 10;
+	top: 50%;
+	left: 0;
+	transform: translate(0, -50%);
+	width: 5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	button {
+		padding: 0.75rem;		
+		background-color: rgba($color: #000000, $alpha: 0.2);
+		border-radius: 9999px;
+		transition: 0.4s ease;
+		&:hover {
+			background-color: rgba($color: #000000, $alpha: 0.4);
+		}
+		svg {
+			opacity: 0.8;
+		}
+	}
+}
+
+.rightButton {
+	position: absolute;
+	z-index: 10;
+	top: 50%;
+	right: 0;
+	transform: translate(0, -50%);
+	width: 5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	button {
+		padding: 0.75rem;		
+		background-color: rgba($color: #000000, $alpha: 0.2);
+		border-radius: 9999px;
+		transition: 0.4s ease;
+		&:hover {
+			background-color: rgba($color: #000000, $alpha: 0.4);
+		}
+		svg {
+			opacity: 0.8;
+		}
+	}
+}
+
+.indicators {
+	z-index: 10;
+	position: absolute;
+	display: flex;
+	gap: 2rem;
+	bottom: 1rem;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.circles {
+	background-color: rgba(255, 255, 255, 0.5);
+	border-radius: 9999px;
+	width: 1.2rem;
+	height: 1.2rem;
+}
+
+.active {
+	background-color: $primary-dark;
+	opacity: 0.6;
+}
+
+@media screen and (max-width : 1024px) {
+	.container {
+		width: 100vw;
+		margin-left: -2rem;
+		min-width: 320px;
+	}
+
+	.leftButton {
+		width: 4.5rem;
+		button {
+			padding: 0.5rem;
+			svg {
+				width: 35px;
+				height: 35px;
+			}
+		}
+	}
+	.rightButton {
+		width: 4.5rem;
+		button {
+			padding: 0.5rem;
+			svg {
+				width: 35px;
+				height: 35px;
+			}
+		}
+	}
+
+	.circles {
+		width: 1rem;
+		height: 1rem;
+	}
+}
+
+@media screen and (max-width : 767px) {
+	.container {
+		margin-left: -1rem;
+	}
+	
+	.leftButton {
+		width: 4rem;
+		button {
+			svg {
+				width: 30px;
+				height: 30px;
+			}
+		}
+	}
+	.rightButton {
+		width: 4rem;
+		button {
+			svg {
+				width: 30px;
+				height: 30px;
+			}
+		}
+	}
+
+	.circles {
+		width: 0.9rem;
+		height: 0.9rem;
+	}
+
+}
+
+@media screen and (max-width : 576px) {
+	.leftButton {
+		width: 3.5rem;
+		button {
+			svg {
+				width: 25px;
+				height: 25px;
+			}
+		}
+	}
+	.rightButton {
+		width: 3.5rem;
+		button {
+			svg {
+				width: 25px;
+				height: 25px;
+			}
+		}
+	}
+
+	.indicators {
+		bottom: 0.75rem;
+	}
+
+	.circles {
+		width: 0.75rem;
+		height: 0.75rem;
+	}
+}
+
+@media screen and (max-width : 480px) {
+	.leftButton {
+		width: 3rem;
+		button {
+			padding: 0.3rem;
+			svg {
+				width: 20px;
+				height: 20px;
+			}
+		}
+	}
+	.rightButton {
+		width: 3rem;
+		button {
+			padding: 0.3rem;
+			svg {
+				width: 20px;
+				height: 20px;
+			}
+		}
+	}
+
+	.indicators {
+		gap: 1.5rem;
+		bottom: 0.65rem;
+	}
+
+	.circles {
+		width: 0.6rem;
+		height: 0.6rem;
+	}
+}
+
+@media screen and (max-width : 360px) {
+	.leftButton {
+		width: 2.5rem;
+	}
+	.rightButton {
+		width: 2.5rem;
+	}
+
+	.indicators {
+		gap: 1.5rem;
+		bottom: 0.5rem;
+	}
+}
+
+

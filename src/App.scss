@@ -1,0 +1,28 @@
+#root {
+	max-width: 1280px;
+	margin: 0 auto;
+	min-height: 100%;
+	padding: 10rem 2rem 5rem;
+}
+
+
+@media screen and (max-width : 1200px) {
+	#root {
+		padding: 8.6rem 2rem 5rem;
+	}
+}
+
+@media screen and (max-width : 1024px) {
+	#root {
+		padding: 3.75rem 2rem 5rem;
+	}
+}
+
+@media screen and (max-width : 767px) {
+	#root {
+		padding: 3.75rem 1rem 5rem;
+	}
+		
+}
+
+

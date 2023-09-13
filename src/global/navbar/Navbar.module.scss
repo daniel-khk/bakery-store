@@ -1,0 +1,169 @@
+@use '../../variables' as *;
+
+.navbar {
+	width: 100%;
+	background-color: $primary;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 10rem;
+	z-index: 98;
+}
+
+.wrapper {
+	max-width: 1280px;
+	padding: 1rem 2rem 0;
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-end;
+	flex-direction: column;
+	margin: 0 auto;
+}
+
+.navMenu {
+	ul {
+		display: flex;
+		gap: 1.5em;
+	}
+}
+
+.menu {
+	font-family: $font-pop;
+	font-weight: 500;
+	padding: 0.3em 0.3em;
+	color: $white;
+	text-transform: capitalize;
+	cursor: pointer;
+	transition: 0.5s ease;
+
+	&:hover {
+		color: $primary-dark;
+	}
+	&.clicked {
+		color: $primary-dark;
+	}
+}
+
+.navLogo {
+	width: 100%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	margin: 1.2rem 0 0;
+}
+
+.mainLogo {
+	filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.5));
+	height: 120px;
+	transform-origin: top left;
+}
+
+
+@media screen and (min-width : 1025px) {
+	.navbarMobile {
+		display: none;
+	}
+}
+
+@media screen and (max-width : 1200px) {
+	.navbar {
+		height: 8.6rem;
+	}
+
+	.mainLogo {
+		height: 90px;
+	}
+}
+
+
+@media screen and (max-width : 1024px) {
+	.navbarWeb {
+		display: none;
+	}
+
+	.navbar {
+		height: 3.75rem;
+		position: fixed;
+	}
+
+	.wrapper {
+		padding: 0 2rem;
+		height: 100%;
+		justify-content: space-between;
+		align-items: center;
+		flex-direction: row;
+	}
+
+	.navMenu {
+		ul {
+			display: flex;
+			gap: 1.5em;
+		}
+	}
+
+	.navLogo {
+		width: auto;
+		margin: 1.8rem 0 0 0;
+	}
+
+	.mainLogo {
+		filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.5));
+		height: 60px;
+		z-index: 91;
+	}
+
+	.sideMenu {
+		position: fixed;
+		top: calc(-100vh + 3.75rem);
+		right: 0;
+		margin-top: 3.75rem;	
+		height: calc(100vh - 3.75rem);
+		width: 100%;
+		z-index: 97;
+		background-color: $white;
+		padding: 2rem 2rem;
+		transition: 0.3s ease-in-out;
+		ul {
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: flex-end;
+			gap: 1.5em;
+		}
+		&.active {
+			top: 0;
+		}	
+	}
+
+	.menu {
+		font-weight: 600;
+		font-size: $font-size-l;
+		color: $primary;
+		text-align: right;
+		width: 10rem;
+	}
+}
+
+@media screen and (max-width : 767px) {
+	.wrapper {
+		padding: 0 1rem;
+	}		
+}
+
+@media screen and (max-width : 480px) {
+	.mainLogo {
+		height: 50px;
+	}
+	.navLogo {
+		margin: 2.2rem 0 0 0;
+	}
+}
+
+@media screen and (max-width : 380px) {
+	.mainLogo {
+		height: 40px;
+	}
+	.navLogo {
+		margin: 2.5rem 0 0 0;
+	}
+}

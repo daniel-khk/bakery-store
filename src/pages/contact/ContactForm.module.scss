@@ -1,0 +1,42 @@
+@use '../../variables' as *;
+
+.contactInput {
+	margin-bottom: 2em;
+	width: 500px;	
+}
+
+input[type=submit] {
+	background-color: $primary;
+	border: none;
+	color: white;
+	font-family: $font-pop;
+	font-weight: 600;
+	padding: 1em 2em;
+	text-decoration: none;
+	margin: 4px 2px;
+	cursor: pointer;
+	float: right;
+	transition: 0.4s ease;
+	&:hover {
+		background-color: $primary-dark;
+	}
+}
+
+@media screen and (max-width : 576px) {
+	.contactInput {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width : 360px) {
+	.contactInput {
+		margin-bottom: 1.5em;
+		label {
+			font-size: $font-size-xs;
+			margin-bottom: 0.5em;
+		}
+		input {
+			font-size: $font-size-xs;
+		}
+	}
+}

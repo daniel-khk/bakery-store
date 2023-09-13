@@ -1,0 +1,60 @@
+@use '../../variables' as *;
+
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	overflow: hidden;
+	gap: 0.7rem;
+	cursor: pointer;
+}
+
+.imageBox {
+	width: 100%;
+	background-color: $background-light;
+	aspect-ratio: 3/4;
+	overflow: hidden;
+
+	img {
+		object-fit: cover;
+		height: 100%;
+		width: 100%;
+		transition: 0.4s ease;
+
+		&:hover {
+			transform: scale(1.1);
+		}
+	}
+}
+
+.textBox {
+	h3 {
+		font-size: $font-size-s;
+		font-weight: 600;
+		margin-bottom: 0.1em;
+	}
+
+	h4 {
+		font-size: $font-size-s-1;
+	}
+}
+
+
+@media screen and (max-width : 767px) {
+	.container {
+		gap: 0.5rem;
+	}
+}
+
+@media screen and (max-width : 480px) {
+	.textBox {
+		h3 {
+			font-size: $font-size-xs;
+			font-weight: 600;
+			line-height: 1.25;
+		}
+		h4 {
+			font-size: $font-size-xs;
+		}
+	}
+}

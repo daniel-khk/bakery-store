@@ -1,0 +1,78 @@
+@use '../../variables' as *;
+
+.container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	gap: 1.5rem;
+	aspect-ratio: 2/1.05;
+	overflow: hidden;
+}
+
+.imageBox {
+	background-color: $background-light;
+	width: 40%;
+	height: 100%;
+	overflow: hidden;
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
+
+.textBox {
+	width: 60%;
+	height: 100%;
+	padding: 0.25rem 0;
+}
+
+.textContent {
+	padding: 0.5em 0;
+	line-height: 1.6em;
+}
+
+
+@media screen and (max-width : 1024px) {
+	.container {
+		aspect-ratio: 2/1.4;
+	}
+
+	.textBox {
+		font-size: $font-size-s;
+	}
+}
+
+@media screen and (max-width : 767px) {
+	.container {
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+		aspect-ratio: initial;
+		gap: 1.25rem;
+	}
+
+	.imageBox {
+		width: 100%;
+		aspect-ratio: 16/9;	
+	}
+	
+	.textBox {
+		width: 100%;
+		padding: 0 0.5rem;
+	}
+}
+
+@media screen and (max-width : 576px) {
+	.container {
+		gap: 1rem;
+	}
+}
+
+@media screen and (max-width : 480px) {
+	.textBox {
+		font-size: $font-size-xs;
+		padding: 0 0.25rem;
+	}
+}

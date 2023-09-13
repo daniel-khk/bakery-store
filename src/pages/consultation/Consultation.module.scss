@@ -1,0 +1,82 @@
+@use '../../variables' as *;
+
+.textContainer {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	margin-bottom: 5rem;
+	text-align: center;
+}
+
+.textTitle {
+	font-size: $font-size-xl;
+	font-weight: 600;
+	margin-bottom: 1.5rem;
+}
+
+.textList {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	gap: 10em;
+	padding-left: 1rem;
+	ul {
+		list-style: inside;
+		text-align: left;
+	}
+	li {
+		padding: 0.5rem 0;
+		list-style-position: outside;
+	}
+}
+
+
+@media screen and (max-width : 767px) {
+	.textContainer {
+		margin-bottom: 4rem;
+	}
+	
+	.textTitle {
+		font-size: $font-size-l;
+		margin-bottom: 1.25rem;
+	}
+
+	.textList {
+		font-size: $font-size-s;
+		gap: 4em;
+	}
+}
+
+@media screen and (max-width : 576px) {
+	.textContainer {
+		margin-bottom: 3rem;
+	}
+	
+	.textTitle {
+		font-size: $font-size-m;
+		margin-bottom: 1rem;
+	}
+
+	.textList {
+		font-size: $font-size-xs;
+		gap: 3em;
+	}
+}
+
+@media screen and (max-width : 480px) {
+	.textList {
+		gap: 2.5em;
+	}
+}
+
+@media screen and (max-width : 360px) {
+	.textTitle {
+		margin-bottom: 0.5rem;
+	}
+
+	.textList {
+		gap: 2em;
+	}
+}
