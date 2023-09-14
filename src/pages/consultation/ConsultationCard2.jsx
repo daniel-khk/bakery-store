@@ -5,8 +5,8 @@ function ConsultationCard2({ service }) {
 	const titleWithLineBreaks = service.title.replace(/\n/g, '<br />');
 	const contentWithLineBreaks = service.content.replace(/\n/g, '<br />');
 	return (
-		<>
-			<div className={styles.cardContainer}>
+		<section>
+			<div className={`${styles.cardContainer} rounded-lg`}>
 				<div className={styles.textBox}>
 					<h4 dangerouslySetInnerHTML={{ __html: titleWithLineBreaks }} />
 					<p dangerouslySetInnerHTML={{ __html: contentWithLineBreaks }} />
@@ -17,8 +17,7 @@ function ConsultationCard2({ service }) {
 					<img src={service.img} alt="Image" loading="lazy" />
 				</div>
 			</div>
-
-		</>
+		</section>
 	)
 }
 

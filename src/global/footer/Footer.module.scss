@@ -6,10 +6,9 @@ footer {
 
 .container {
 	width: 100%;
-	background-color: #cccccc;
+	background-color: #d3f0df;
 	height: 5rem;
 	width: 100%;
-	color: $white;
 	position: absolute;
 	left: 0;
 	bottom: 0;
@@ -34,7 +33,7 @@ footer {
 	font-size: $font-size-xs;
 	margin: 0 0 0 1.5em;
 	padding: 0.3em 0.3em;
-	color: $white;
+	color: $primary;
 	line-height: 1.6em;
 }
 

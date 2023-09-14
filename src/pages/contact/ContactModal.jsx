@@ -22,14 +22,14 @@ function ContactModal({ isValid, closeModal }) {
 	}, []);
 	
 	return (
-		<div className={styles.container}>
-			<div className={styles.content}>
+		<main className={styles.container}>
+			<section className={`${styles.content} rounded-md`}>
 				<div className={styles.contentText}>
 					{modalContent}
 				</div>
-				<button onClick={closeModal}>Close</button>
-			</div>
-		</div>
+				<button onClick={closeModal} className="rounded">Close</button>
+			</section>
+		</main>
 	)
 }
 

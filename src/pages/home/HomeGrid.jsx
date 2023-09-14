@@ -8,7 +8,7 @@ function HomeGrid() {
 	const items = homeGridData;
 
 	return (
-		<>
+		<section>
 			<div className={styles.title}>
 				<Title label={"best sellers"} />
 			</div>
@@ -24,7 +24,7 @@ function HomeGrid() {
 					)
 				})}
 			</div>
-		</>
+		</section>
 	)
 }
 

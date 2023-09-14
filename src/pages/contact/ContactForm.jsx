@@ -53,7 +53,7 @@ function ContactForm() {
 	}
 
 	return (
-		<>
+		<section>
 			<div className={styles.contactInput}>
 				<label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
 					Email
@@ -64,7 +64,7 @@ function ContactForm() {
 					value={email}
 					onChange={handleEmailChange}
 					aria-describedby="helper-text-explanation"
-					className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-none focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+					className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
 					placeholder="email@gmail.com"
 				/>
 			</div>
@@ -78,7 +78,7 @@ function ContactForm() {
 					value={userName}
 					onChange={handleUserNameChange}
 					aria-describedby="helper-text-explanation"
-					className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-none focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+					className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
 					placeholder="Yoona"
 				/>
 			</div>
@@ -92,7 +92,7 @@ function ContactForm() {
 					value={subject}
 					onChange={handleSubjectChange}
 					aria-describedby="helper-text-explanation"
-					className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-none focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+					className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
 					placeholder="..."
 				/>
 			</div>
@@ -105,17 +105,17 @@ function ContactForm() {
 					value={message}
 					onChange={handleMessageChange}
 					rows="6"
-					className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-none border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+					className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
 					placeholder="..."
 				></textarea>
 			</div>
 			<div className={styles.submitButton}>
-				<input type="submit" value="Submit" onClick={() => {
+				<input className="rounded" type="submit" value="Submit" onClick={() => {
 					validation();
 				}} />
 			</div>
 			{isModalOpen && <ContactModal isValid={isValid} closeModal={closeModal} />}
-		</>
+		</section>
 	)
 }
 

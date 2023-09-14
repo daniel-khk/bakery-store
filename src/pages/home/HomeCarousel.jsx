@@ -11,7 +11,7 @@ import image04 from '../../assets/homeCarouselImg/homeCarousel_4.webp';
 
 function HomeCarousel() {
 	return (
-		<div className="carousel-container">
+		<section className="carousel-container">
 			<Swiper
 				spaceBetween={0}
 				centeredSlides={true}
@@ -31,7 +31,7 @@ function HomeCarousel() {
 				<SwiperSlide><img className="slideImage" src={image03} alt="Image 3" /></SwiperSlide>
 				<SwiperSlide><img className="slideImage" src={image04} alt="Image 4" /></SwiperSlide>
 			</Swiper>
-		</div>
+		</section>
 	)
 }
 

@@ -4,11 +4,11 @@ function Footer() {
 	return (
 		<footer>
 			<div className={styles.container}>
-				<nav className={styles.wrapper}>
+				<section className={styles.wrapper}>
 					<ul>
 						<li className={styles.menu}>Yoona's Kitchen<br/>Designed & Developed by Daniel.K</li>
 					</ul>
-				</nav>
+				</section>
 			</div>
 		</footer>
 

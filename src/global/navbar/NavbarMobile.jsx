@@ -47,7 +47,7 @@ function NavbarMobile() {
 					</nav>
 				</div>
 			</div>
-			<div className={`${styles.sideMenu} ${isSideMenuOpen && styles.active}`}>
+			<nav className={`${styles.sideMenu} ${isSideMenuOpen && styles.active}`}>
 				<ul>
 					<li className={`${styles.menu}`} onClick={() => { closeSideMenu() }}>
 						<Link to="/">home</Link>
@@ -65,7 +65,7 @@ function NavbarMobile() {
 						<Link to="/contact">contact</Link>
 					</li>
 				</ul>
-			</div>
+			</nav>
 		</header>
 	)
 }
