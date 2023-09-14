@@ -1,13 +1,12 @@
 @use '../../variables' as *;
 
 .title {
-	margin-top: 8rem;
+	padding-top: 0.5rem;
 }
 
 .gridContainer {
 	display: grid;
 	width: 100%;
-	margin-top: -0.25rem;
 	grid-template-columns: repeat(3, 1fr);
 	grid-template-rows: repeat(3, 1fr);
 	gap: 1.5rem;
@@ -86,10 +85,6 @@
 
 
 @media screen and (max-width : 1024px) {
-	.title {
-		margin-top: 6rem;
-	}
-
 	.gridText {
 		font-size: $font-size-m;
 		padding: 0 0.5rem;
@@ -97,10 +92,6 @@
 }
 
 @media screen and (max-width : 767px) {
-	.title {
-		margin-top: 5.5rem;
-	}
-	
 	.gridContainer {
 		grid-template-columns: repeat(2, 1fr);
 		grid-template-rows: repeat(3, 1fr);
@@ -123,25 +114,9 @@
 	}
 }
 
-@media screen and (max-width : 576px) {
-	.title {
-		margin-top: 5rem;
-	}
-}
-
 @media screen and (max-width : 480px) {
-	.title {
-		margin-top: 4.5rem;
-	}
-
 	.gridText {
 		font-size: $font-size-s;
 		line-height: 1.2em;
 	}	
-}
-
-@media screen and (max-width : 360px) {
-	.title {
-		margin-top: 4rem;
-	}
 }

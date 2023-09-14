@@ -13,7 +13,8 @@
 .textTitle {
 	font-size: $font-size-xl;
 	font-weight: 600;
-	margin-bottom: 1.5rem;
+	margin-top: -0.75em;
+	margin-bottom: 1.2em;
 }
 
 .textList {
@@ -22,10 +23,12 @@
 	align-items: flex-start;
 	gap: 10em;
 	padding-left: 1rem;
+
 	ul {
 		list-style: inside;
 		text-align: left;
 	}
+
 	li {
 		padding: 0.5rem 0;
 		list-style-position: outside;
@@ -33,14 +36,23 @@
 }
 
 
+@media screen and (max-width : 1024px) {
+	.textContainer {
+		margin-bottom: 3rem;
+	}
+
+	.textList {
+		gap: 7em;
+	}
+}
+
 @media screen and (max-width : 767px) {
 	.textContainer {
-		margin-bottom: 4rem;
+		margin-bottom: 2.5rem;
 	}
-	
+
 	.textTitle {
 		font-size: $font-size-l;
-		margin-bottom: 1.25rem;
 	}
 
 	.textList {
@@ -51,12 +63,11 @@
 
 @media screen and (max-width : 576px) {
 	.textContainer {
-		margin-bottom: 3rem;
+		margin-bottom: 2rem;
 	}
-	
+
 	.textTitle {
 		font-size: $font-size-m;
-		margin-bottom: 1rem;
 	}
 
 	.textList {
@@ -66,6 +77,14 @@
 }
 
 @media screen and (max-width : 480px) {
+	.textContainer {
+		margin-bottom: 1.5rem;
+	}
+
+	.textTitle {
+		font-size: $font-size-s;
+	}
+
 	.textList {
 		gap: 2.5em;
 	}
@@ -73,7 +92,8 @@
 
 @media screen and (max-width : 360px) {
 	.textTitle {
-		margin-bottom: 0.5rem;
+		margin-top: -0.5em;
+		margin-bottom: 0.75em;
 	}
 
 	.textList {

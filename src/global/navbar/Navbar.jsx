@@ -32,7 +32,7 @@ function Navbar() {
 							</ul>
 						</div>
 						<div className={styles.navLogo}>
-							<img className={styles.mainLogo} src={MainLogo} alt="Main Logo" />
+							<a href="/"><img className={styles.mainLogo} src={MainLogo} alt="Main Logo" /></a>
 						</div>
 					</nav>
 				</div>
