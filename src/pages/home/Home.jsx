@@ -1,4 +1,3 @@
-import styles from './Home.module.scss';
 import HomeCarousel from './HomeCarousel';
 import HomeGrid from './HomeGrid';
 
@@ -6,7 +5,7 @@ import HomeGrid from './HomeGrid';
 function Home() {
 
 	return (
-		<main className={styles.homeMain}>
+		<main>
 			<HomeCarousel />
 			<HomeGrid />
 		</main>
